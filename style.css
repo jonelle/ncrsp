@@ -45,11 +45,14 @@ strong {
 em {
 	font-style: italic;
 }
-p {
+p, .entry-content p, .entry-summary p {
 	line-height: 1.5em;
 	font-size:16px;
 	margin-bottom:20px;
 	color:#333;
+}
+.entry-content h1 {
+	margin:0;
 }
 h1 {
 	font-size: 23px;
@@ -61,6 +64,7 @@ h2 {
 	font-size: 23px;
 	padding-bottom: 15px;
 }
+
 /**** HEADER ****/
 header {
 	width: 100%;
@@ -247,7 +251,6 @@ header nav {
 	font-family:"Century Gothic", Arial, Helvetica, sans-serif;
 }
 
-
 .inner-content h3 {
 	font-size:20px;
 	color:#3c4652;
@@ -258,8 +261,10 @@ header nav {
 	
 }
 
-
-
+.widget-area .widget h3 {
+	margin:0;
+	text-transform:none;
+}
 .inner-content ul {
 	list-style:circle;
 	line-height:20px;
@@ -293,18 +298,18 @@ header nav {
 
 /*   Navigation Styles  */
 
-.inner-content a {
+.inner-content a, .widget-area .widget a {
 	color: #2c5893;
 	text-decoration: underline;
-	-webkit-transition: color .5s linear;
+/*	-webkit-transition: color .5s linear;
 	-moz-transition: color .5s linear;
 	-o-transition: color .5s linear;
-	transtion: color .5s linear;
+	transtion: color .5s linear;*/
 }
 
 
-.inner-content a:hover {
-	color: #c2103a;
+.inner-content a:hover, .widget-area .widget a:hover {
+	color: #666666;
 	text-decoration: underline;
 
 }
@@ -367,6 +372,12 @@ header nav {
 .widget-area {
 width:100%;
 }
+
+.widget-area .widget li {
+	font-size:15px;
+	line-height:24px;
+}
+
 /**** BIOS ****/
 .content.bio .entry-content h3 { cursor: pointer; }
 .content.bio .entry-content p { display: none; }

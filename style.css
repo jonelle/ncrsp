@@ -100,14 +100,12 @@ header .header-content {
 	position: relative;
 	height: 120px;
 }
-
 header nav {
 	background: url(images/nav.png) repeat-x 0 0;
 	width: 960px;
 	height: 49px;
 	/*margin: 0 auto 25px;*/
 }
-
 .main-navigation ul li a {
 	display: block;
 	text-decoration: none;
@@ -119,9 +117,10 @@ header nav {
 	-o-transition: color .5s linear;
 	transtion: color .5s linear;*/
 }
-
-.main-navigation ul li ul li a {
-	color:#444;
+.main-navigation li ul li a {
+	background: #305c93;
+	border:none;
+	text-align:left;
 }
 
 .main-navigation ul.nav-menu {
@@ -129,20 +128,23 @@ header nav {
 	text-align:center;
 }
 
+.main-navigation .current-menu-item > a,
+.main-navigation .current-menu-ancestor > a,
+.main-navigation .current_page_item > a,
+.main navigation .current_page_ancestor > a {
+	font-weight:normal;
+	color: #fff;
+}
 
 /**** MIDDLE AREA ****/
 .middle, .content-container {
 	width: 100%;
-/*	background: url(images/middle-gradient.jpg) repeat-x;*/
 }
 .middle .middle-inner {
 	width: 950px;
 	background: #FFF;
 	margin: 0 auto 1px;
 	padding: 5px;
-/*	overflow: hidden;*/
-/*	margin-top: -22px;*/
-/*	position: relative;*/
 }
 .middle-inner .top, .middle-inner .bottom { overflow: hidden; }
 .middle-inner .image-box {

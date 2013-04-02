@@ -32,8 +32,8 @@
 </head>
 
 <body <?php body_class(); ?>>
-<div class="wrapper">
-	<div class="header" id="masthead" class="site-header" role="banner">
+<div id="page" class="wrapper">
+	<header id="masthead" class="site-header" role="banner">
 		<div class="inner-header">
 			<div class="map"></div><!-- end map -->
 			<div class="header-content">
@@ -44,13 +44,13 @@
 					<img src="<?php echo get_stylesheet_directory_uri(); ?>/images/logo.png"/>
 				</div><!-- end logo -->
 			</div><!-- end header content -->
-			<div class="nav" id="site-navigation" class="main-navigation" role="navigation">
+			<nav class="main-navigation" id="site-navigation" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-			</div><!-- #site-navigation -->
+			</nav><!-- #site-navigation -->
 
 			<?php $header_image = get_header_image();
 			if ( ! empty( $header_image ) ) : ?>
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $header_image ); ?>" class="header-image" width="<?php echo get_custom_header()->width; ?>" height="<?php echo get_custom_header()->height; ?>" alt="" /></a>
 			<?php endif; ?>			
 		</div><!-- end inner header -->
-	</div><!-- #masthead --> 
+	</header><!-- #masthead --> 

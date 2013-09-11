@@ -2,8 +2,8 @@
 Theme Name:     NCRSP Child Theme
 Theme URI:      http://nutritioncrsp.org/
 Description:    Child theme for the Twenty Twelve theme 
-Author:         Peoples
-Author URI:     http://example.com/about/
+Author:         Jonelle Lonergan
+Author URI:     http://www.jonellelonergan.com
 Template:       twentytwelve
 Version:        0.1.0
 */
@@ -87,7 +87,7 @@ header .label {
 	margin: 45px 0;
 }
 header .logo {
-	width: 312px;
+	width: 500px;
 	height: 54px;
 	margin: 45px 0;
 	float: right;
@@ -173,6 +173,7 @@ header nav {
  color: #FFF;
  font-size: 14px;
  font-weight: 400;
+ line-height:1.3em;
 }
 .mission-statement h1 {
 	color: #FFF;

@@ -9,13 +9,18 @@
 
 get_header(); ?>
 
-	<div class="content-container">
+		<div class="content-container">
 		<div class="inner-content">
-			<?php if ( function_exists('yoast_breadcrumb') ) {
-					yoast_breadcrumb('<p id="breadcrumbs">','</p>');
-				}
-			?>			
 			<div class="content">
+
+		<?php if ( have_posts() ) : ?>
+
+			<header class="page-header">
+				<h1 class="page-title"><?php printf( __( 'Search Results for: %s', 'twentytwelve' ), '<span>' . get_search_query() . '</span>' ); ?></h1>
+			</header>
+
+			<?php twentytwelve_content_nav( 'nav-above' ); ?>
+
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 				<?php get_template_part( 'content', get_post_format() ); ?>
@@ -37,6 +42,7 @@ get_header(); ?>
 			</article><!-- #post-0 -->
 
 		<?php endif; ?>
+
 			</div><!-- end content -->
 			<div class="sidebar">
 				<?php get_sidebar(); ?>
